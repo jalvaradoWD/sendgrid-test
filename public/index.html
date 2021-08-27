@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 3rem 5rem;
+      }
+      img,
+      p,
+      address,
+      a,
+      button,
+      small {
+        display: block;
+      }
+      header img {
+        width: 500px;
+        height: auto;
+        max-width: 100%;
+      }
+      #logo {
+        width: inherit;
+        align-self: center;
+      }
+      #graph {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 6px;
+      }
+
+      #logo {
+        height: 50px;
+        margin: 1rem 0 2rem;
+      }
+
+      #crunchbase-logo {
+        width: 200px;
+        margin-bottom: 1rem;
+      }
+
+      progress[value] {
+        height: 40px;
+      }
+
+      .card {
+        border: 1px solid lightgrey;
+        box-shadow: 5px 5px 6px lightgrey;
+        padding: 3rem 2.5rem;
+        border-radius: 6px;
+        margin: 2rem 0;
+      }
+
+      .container {
+        max-width: 100%;
+        min-width: 10rem;
+        width: 100%;
+        max-width: 60rem;
+        margin: 0 auto;
+      }
+
+      /*========= Saved Partners Styles =========*/
+
+      .empty {
+        background-color: #cccccc;
+        border-radius: 0 5px 5px 0;
+      }
+
+      .filled {
+        background-color: #198754;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .progressBar {
+        width: 100%;
+      }
+
+      /*========= Footer Styles =========*/
+
+      #footer {
+        background-color: #c5c5c5;
+        padding: 1rem 2rem;
+      }
+
+      #footer a {
+        display: inline;
+      }
+
+      /*========= Partner Styles =========*/
+
+      #savedPartners td {
+        float: left;
+        height: 15px;
+      }
+
+      .partner h5 {
+        font-size: 2rem;
+        margin: 1rem 0;
+      }
+
+      .partner strong {
+        display: block;
+        margin: 1rem 0;
+        font-size: 1.25rem;
+        color: grey;
+      }
+
+      .partner small {
+        display: block;
+        margin: 1rem 0;
+        font-size: 1rem;
+        font-weight: bold;
+        color: lightgray;
+      }
+
+      .partner .badge {
+        background-color: #feebdf;
+        color: #d29164;
+        border-radius: 10px;
+        padding: 0.25rem;
+        max-width: 500px;
+        width: 10%;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .partner {
+        padding: 1rem 2.5rem 2.5rem 2.5rem;
+      }
+
+      /*========= CTA Styles =========*/
+
+      #CTA {
+        margin-bottom: 1rem;
+      }
+      #CTA a {
+        width: 100%;
+        text-decoration: none;
+      }
+      #CTA h5 {
+        margin: 1rem 0 3rem 0;
+      }
+
+      #CTA h5,
+      #CTA p {
+        font-size: 1.25rem;
+      }
+      #CTA button {
+        width: 50%;
+        border: none;
+        margin: 0 auto;
+        background-color: #198754;
+        color: white;
+        font-size: 1.15rem;
+        font-weight: bold;
+        border-radius: 6px;
+        padding: 0.5rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <header class="card">
+      <!-- Chart Starts -->
+      <img
+        id="logo"
+        src="https://global-uploads.webflow.com/5cd0d3fd92fac9173b16f331/60147cd5f09ad82983143865_new-logo.png"
+      />
+      <img
+        id="graph"
+        alt="Graph image"
+        src="https://quickchart.io/chart/render/zm-0d030af7-4f82-48e7-9e3e-38252129dd4d?labels=Q1,Q2,Q1,Q2,Q1,Q2,Q1,Q2&title=Funding%20Score%2073"
+      />
+    </header>
+
+    <div id="savedPartners">
+      <div class="card partner">
+        <p class="badge">Pre-Qual</p>
+        <h5>Pre-qualification</h5>
+        <strong>You received pre-qualifcation from Clearco!</strong>
+        <table
+          style="border: 0"
+          cellpadding="0"
+          cellspacing="0"
+          class="progressBar"
+        >
+          <tr>
+            <td class="filled" style="width: 80%; height: 20px"></td>
+            <td class="empty" style="width: 20%; height: 20px"></td>
+          </tr>
+        </table>
+        <small>Today</small>
+      </div>
+    </div>
+
+    <div id="CTA" class="card">
+      <h5>Want to explore potential offers based on estimated MRR?</h5>
+      <p>
+        Use our Matches Calculator to see potential funding offers. Filter and
+        search offers based on MRR and other financial metrics.
+      </p>
+      <a href="http://www.google.com"><button>Start</button></a>
+    </div>
+
+    <div id="footer">
+      <img
+        id="crunchbase-logo"
+        src="http://cdn.mcauto-images-production.sendgrid.net/58b3dd1e8dd27089/9b44424c-e3c7-41ce-9dc3-b062bfb56935/300x42.png"
+      />
+      <p>Discover innovative companies and the people behind them.</p>
+
+      <address>564 Market St, San Fracisco, CA 94104</address>
+      <p>&copy; 2021 Crunchbase Inc. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      <p><a href="#">Unsubscribe</a> from Crunchbase Daily.</p>
+    </div>
+  </body>
+</html>

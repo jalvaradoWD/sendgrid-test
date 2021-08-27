@@ -1,10 +1,13 @@
 import express from 'express';
 import {config} from 'dotenv';
-
+import path from 'path';
+import fs from 'fs';
+import sgMail, {MailDataRequired} from '@sendgrid/mail';
 config();
 
+sgMail.setApiKey(process.env.SENGRID_API!);
+
 import emailRouter from './email/email.controller';
-import QuickChart from 'quickchart-js';
 
 const PORT = process.env.PORT || 5000;
 
@@ -13,31 +16,19 @@ const server = express();
 server.use(express.json());
 
 server.get('/', (req, res) => {
-  const labels = ['January', 'February', 'March', 'April', 'May', 'June'];
-  const data = {
-    labels: labels,
-    datasets: [
-      {
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
-      },
-    ],
+  const msg: MailDataRequired = {
+    to: 'hanktheiii1337@gmail.com',
+    from: 'josealvarado1337@gmail.com',
+    subject: 'test',
+    text: 'Hello world',
+    html: fs.readFileSync(
+      path.join(__dirname, '..', 'public', 'index.html'),
+      'utf-8'
+    ),
+    dynamicTemplateData: {},
   };
-  const test = {
-    type: 'line',
-    data,
-    options: {},
-  };
-  const myChart = new QuickChart();
-  myChart
-    .setConfig(test)
-    .setWidth(800)
-    .setHeight(400)
-    .setBackgroundColor('transparent');
-
-  res.send(myChart.getUrl());
+  sgMail.send(msg);
+  res.json('Message sent');
 });
 
 server.use('/email', emailRouter);
