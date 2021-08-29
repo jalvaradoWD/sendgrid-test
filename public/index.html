@@ -123,7 +123,7 @@
         border-radius: 10px;
         padding: 0.25rem;
         max-width: 500px;
-        width: 10%;
+        width: 20%;
         font-size: 0.9rem;
         font-weight: bold;
         text-align: center;
@@ -131,6 +131,17 @@
 
       .partner {
         padding: 1rem 2.5rem 2.5rem 2.5rem;
+      }
+
+      .partner-header {
+        display: flex;
+        align-items: center;
+      }
+
+      .partner-header img {
+        height: 90px;
+        align-self: flex-start;
+        margin-right: 2rem;
       }
 
       /*========= CTA Styles =========*/
@@ -150,6 +161,7 @@
       #CTA p {
         font-size: 1.25rem;
       }
+
       #CTA button {
         width: 50%;
         border: none;
@@ -162,16 +174,81 @@
         padding: 0.5rem;
         cursor: pointer;
       }
+
+      /*========= Deadline Styles =========*/
+
+      #deadline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem auto;
+      }
+
+      #deadline img,
+      #deadline p {
+        display: inline;
+      }
+
+      #deadline img {
+        width: 55px;
+      }
+
+      #deadline p {
+        margin-left: 1rem;
+        font-weight: bold;
+        font-size: 1.3rem;
+        text-align: center;
+      }
+
+      #timeLeft {
+        color: orange;
+      }
+
+      #amount {
+        color: green;
+      }
+
+      /*========= Banking Styles =========*/
+      #banking {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      #banking a {
+        background-color: lightgray;
+        margin: 0 auto;
+        max-width: 12rem;
+        padding: 1rem;
+        border-radius: 30px;
+        border: 2px solid lightgrey;
+        background-color: white;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+      }
     </style>
   </head>
 
   <body class="container">
     <header class="card">
       <!-- Chart Starts -->
+
       <img
         id="logo"
         src="https://global-uploads.webflow.com/5cd0d3fd92fac9173b16f331/60147cd5f09ad82983143865_new-logo.png"
       />
+
+      <div id="deadline">
+        <img
+          src="http://cdn.mcauto-images-production.sendgrid.net/58b3dd1e8dd27089/64b915d3-dac5-4c1b-bb60-80b0c854fce5/999x999.png"
+          alt=""
+        />
+        <p>
+          We have <span id="timeLeft">2 months left</span> to help you secure
+          <span id="amount">$10,000,000!</span>
+        </p>
+      </div>
+
       <img
         id="graph"
         alt="Graph image"
@@ -179,23 +256,136 @@
       />
     </header>
 
-    <div id="savedPartners">
-      <div class="card partner">
-        <p class="badge">Pre-Qual</p>
-        <h5>Pre-qualification</h5>
-        <strong>You received pre-qualifcation from Clearco!</strong>
-        <table
-          style="border: 0"
-          cellpadding="0"
-          cellspacing="0"
-          class="progressBar"
-        >
-          <tr>
-            <td class="filled" style="width: 80%; height: 20px"></td>
-            <td class="empty" style="width: 20%; height: 20px"></td>
-          </tr>
-        </table>
-        <small>Today</small>
+    <div id="banking" class="card">
+      <p>To get started, link your business bank account</p>
+      <a href="bank-button">Integrate Banking</a>
+    </div>
+
+    <div id="savedPartners" class="card">
+      <div class="partner">
+        <div class="partner-header">
+          <img
+            src="http://cdn.mcauto-images-production.sendgrid.net/58b3dd1e8dd27089/ba208068-6b99-4f29-9074-c43d1e4dd9ed/1215x1215.png"
+            alt=""
+          />
+          <div>
+            <p class="badge">Pre-Qual</p>
+            <h5>Pre-qualification</h5>
+            <strong>You received pre-qualifcation from Clearco!</strong>
+            <table
+              style="border: 0"
+              cellpadding="0"
+              cellspacing="0"
+              class="progressBar"
+            >
+              <tr>
+                <td class="filled" style="width: 80%; height: 20px"></td>
+                <td class="empty" style="width: 20%; height: 20px"></td>
+              </tr>
+            </table>
+            <small>Today</small>
+          </div>
+        </div>
+      </div>
+      <div class="partner">
+        <div class="partner-header">
+          <img
+            src="http://cdn.mcauto-images-production.sendgrid.net/58b3dd1e8dd27089/ba208068-6b99-4f29-9074-c43d1e4dd9ed/1215x1215.png"
+            alt=""
+          />
+          <div>
+            <p class="badge">Pre-Qual</p>
+            <h5>Pre-qualification</h5>
+            <strong>You received pre-qualifcation from Clearco!</strong>
+            <table
+              style="border: 0"
+              cellpadding="0"
+              cellspacing="0"
+              class="progressBar"
+            >
+              <tr>
+                <td class="filled" style="width: 80%; height: 20px"></td>
+                <td class="empty" style="width: 20%; height: 20px"></td>
+              </tr>
+            </table>
+            <small>Today</small>
+          </div>
+        </div>
+      </div>
+      <div class="partner">
+        <div class="partner-header">
+          <img
+            src="http://cdn.mcauto-images-production.sendgrid.net/58b3dd1e8dd27089/ba208068-6b99-4f29-9074-c43d1e4dd9ed/1215x1215.png"
+            alt=""
+          />
+          <div>
+            <p class="badge">Pre-Qual</p>
+            <h5>Pre-qualification</h5>
+            <strong>You received pre-qualifcation from Clearco!</strong>
+            <table
+              style="border: 0"
+              cellpadding="0"
+              cellspacing="0"
+              class="progressBar"
+            >
+              <tr>
+                <td class="filled" style="width: 80%; height: 20px"></td>
+                <td class="empty" style="width: 20%; height: 20px"></td>
+              </tr>
+            </table>
+            <small>Today</small>
+          </div>
+        </div>
+      </div>
+      <div class="partner">
+        <div class="partner-header">
+          <img
+            src="http://cdn.mcauto-images-production.sendgrid.net/58b3dd1e8dd27089/ba208068-6b99-4f29-9074-c43d1e4dd9ed/1215x1215.png"
+            alt=""
+          />
+          <div>
+            <p class="badge">Pre-Qual</p>
+            <h5>Pre-qualification</h5>
+            <strong>You received pre-qualifcation from Clearco!</strong>
+            <table
+              style="border: 0"
+              cellpadding="0"
+              cellspacing="0"
+              class="progressBar"
+            >
+              <tr>
+                <td class="filled" style="width: 80%; height: 20px"></td>
+                <td class="empty" style="width: 20%; height: 20px"></td>
+              </tr>
+            </table>
+            <small>Today</small>
+          </div>
+        </div>
+      </div>
+      <div class="partner">
+        <div class="partner-header">
+          <img
+            src="http://cdn.mcauto-images-production.sendgrid.net/58b3dd1e8dd27089/ba208068-6b99-4f29-9074-c43d1e4dd9ed/1215x1215.png"
+            alt=""
+          />
+          <div>
+            <p class="badge">Pre-Qual</p>
+            <h5>Pre-qualification</h5>
+            <strong>You received pre-qualifcation from Clearco!</strong>
+            <table
+              style="border: 0"
+              cellpadding="0"
+              cellspacing="0"
+              class="progressBar"
+            >
+              <tr>
+                <td class="filled" style="width: 80%; height: 20px"></td>
+                <td class="empty" style="width: 20%; height: 20px"></td>
+              </tr>
+            </table>
+            <small>Today</small>
+          </div>
+        </div>
       </div>
     </div>
 
